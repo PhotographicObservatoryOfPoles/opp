@@ -1,0 +1,29 @@
+// All styles for footer pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+// Links footer
+#region-links-footer {
+	padding-left: 150px;
+	.menu li {
+		display: inline;
+		&:before { content: " | "; }
+		&:first-child:before { content: none; }
+		&.first { margin-left: 0; }
+		&.last { margin-right: 0; }
+	}
+}
+
+// Social networks
+#region-social-networks {
+	width: 280px;
+	padding-right: 150px;
+}
+
+// Copyright
+#region-copyright {
+	width: 580px;
+	padding-left: 150px;
+}

@@ -1,0 +1,36 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* Basis */
+@import "base";
+
+/* Common styles */
+// Header
+@import "wide/header";
+// Footer
+@import "wide/footer";
+// Commons
+@import "wide/commons";
+
+/* Specific styles */
+// Home
+@import "wide/homepage";
+// Observatoire
+@import "wide/observatoire";
+// Expeditions
+@import "wide/expeditions";
+// Galleries
+@import "wide/galleries";
+// Contributors
+@import "wide/contributors";
+// Maps
+@import "wide/maps";
+// Schools
+@import "wide/schools";
+// News
+@import "wide/news";
+// Taxonomy
+@import "wide/taxonomy";

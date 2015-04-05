@@ -1,0 +1,216 @@
+// All styles for contributors pages (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+/* All contributors page */
+.region-main-content--contributors {
+	padding-top: 10px;
+	padding-bottom: 30px;
+
+	#views_slideshow_cycle_main_contr-supercontributors_slider {
+		width: 100%;
+
+	  	.views-slideshow-cycle-main-frame,
+	  	.views-slideshow-cycle-main-frame-row,
+	  	.views-slideshow-cycle-main-frame-row-item {
+	  		width: 100% !important;
+	  		height: auto;
+		}
+
+		.views-field {
+			position: absolute;
+			background: rgba(255,255,255,0.5);
+			padding: 10px 20px;
+			z-index: 200;
+		}
+
+		.views-field-picture {
+			max-width: 100%;
+			width: 100%;
+			a { display: block; }
+			img {
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.views-field-name {
+			top: 35%;
+			left: 2em;
+			h2 {
+				margin-bottom: 0;
+			}
+		}
+
+		.views-field-summary {
+			display: none;
+			top: 55%;
+			left: 2em;
+			width: 310px;
+		}
+	}
+
+	.views-slideshow-controls-bottom {
+		z-index: 200;
+		margin-top: -25px;
+		position: relative;
+		float: right;
+		margin-right: 10px;
+
+		.views-slideshow-controls-text {
+			width: 100%;
+
+			.views-slideshow-controls-text-pause { display: none; }
+
+			.views-slideshow-controls-text-previous,
+			.views-slideshow-controls-text-next {
+				width: 16px;
+				height: 16px;
+				overflow: hidden;
+				display: inline-block;
+				a { display: none; }
+			}
+
+			.views-slideshow-controls-text-previous {
+				background: url('../img/arrow-left.png') no-repeat center;
+			}
+
+			.views-slideshow-controls-text-next {
+				background: url('../img/arrow-right.png') no-repeat center;
+			}
+		}
+	}
+}
+
+.region-postscript--contributors {
+	.content {
+		margin: -10px -10px 0 -10px;
+	}
+
+	.views-row {
+		max-width: 220px;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+		margin: 10px;
+	}
+
+	.figure-w-hover figcaption {
+		h2 {
+			padding: 20px;
+			font-size: 1em;
+
+			a {
+				color: $link-hover;
+			}
+		}
+
+		p {
+			color: white;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			font-size: 0.9em;
+		}
+	}
+}
+
+/* One contributor page */
+.container-12 .region-main-content--contributor {
+	&.grid-8 {
+		width: 100%;
+	}
+}
+
+.region-main-content--contributor {
+	/*height: 549px;
+  	overflow-y: hidden; // scroll ?*/
+	padding-bottom: 5px;
+	
+	p {
+		padding-right: 25px;
+	}
+}
+
+.container-12 .region-postscript--contributor {
+	&.grid-8 {
+		width: 100%;
+	}
+}
+
+.region-postscript--contributor {
+	padding-top: 25px;
+	border-top: 1px dotted #30819E;
+
+	.content {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.views-row {
+		max-width: 245px;
+		max-height: 175px;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+		margin: 10px;
+	}
+
+	.figure-w-hover figcaption {
+		padding: 1em;
+
+		h3 {
+			margin: 5px 0 20px 0;
+		}
+
+		p.type {
+			margin: 5px 0 20px 0;
+		}
+
+		.link--view-more > a {
+			font-size: 0.85em;
+		}
+	}
+}
+
+.container-12 .region-sidebar-right--contributor {
+	&.grid-4 {
+		//float: right;
+		float: none;
+  		display: block;
+  		width: 100%;
+	}
+}
+
+.region-sidebar-right--contributor {
+	padding-top: 10px;
+	margin-top: -5px;
+	margin-bottom: -5px;
+
+	.views-row,
+	figure {
+		max-width: 380px;
+		overflow: hidden;
+		margin: 5px 0;
+	}
+
+	.figure-w-hover figcaption {
+		padding: 2em;
+
+		h3 {
+			margin: 5px 0 20px 0;
+		}
+
+		p.type {
+			margin: 5px 0 20px 0;
+		}
+
+		.link--view-more > a {
+			font-size: 0.85em;
+		}
+	}
+}

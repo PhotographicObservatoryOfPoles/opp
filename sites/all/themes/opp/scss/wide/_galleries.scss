@@ -1,0 +1,24 @@
+// All styles for galleries pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* All galleries page */
+// Galleries
+.container-12 .region-main-content--galleries {
+	&.grid-9 {
+		width: 880px;
+		display: inline;
+		float: left;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+// Filters
+.region-sidebar-left--galleries {
+	&.grid-3 { display: inline-block; }
+}
+
+/* One gallery page */

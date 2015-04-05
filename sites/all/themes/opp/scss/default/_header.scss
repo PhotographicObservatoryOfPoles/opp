@@ -1,0 +1,281 @@
+// All styles for header (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+
+// Global header
+#section-header { position: relative; }
+
+#zone-header-top-wrapper,
+#zone-header-bottom-wrapper {
+	position: relative;
+	z-index: 2;
+}
+
+#zone-header-top-wrapper {
+	background: rgba($background-header, 0.75);
+	@include box-shadow(0 0 10px 0 rgba(18, 63, 79, 0.3));
+}
+
+#zone-header-bottom-wrapper {
+	background: rgba($background-header, 0.65);
+	//height: 50px;
+	.region-menu {
+		position: relative;
+		padding: 0; margin: 0;
+	}
+	.region-sticky-logo {
+		height: 50px;
+		display: none;
+		padding-left: 0;
+	}
+	&.is-sticky {
+		background: rgba($background-header, 0.95);
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 50px;
+		z-index: 100;
+		@include box-shadow(0 0 10px 0 rgba(18, 63, 79, 0.2));
+		.region-menu {
+			left: 0;
+			top: 0;
+			background: rgba($background-header, 0.95);
+
+			.menu li.expanded ul.menu { background: rgba($background-header, 0.95); }
+		}
+		
+		.region-sticky-logo { display: block; }
+		#toggle-nav { top: -45px; }
+	}
+}
+
+// Branding
+#region-branding {
+	min-width: 205px;
+	padding-left: 0;
+}
+
+.logo-img img {
+	display: block;
+	min-width: 150px;
+	width: 100%;
+	margin: 10px auto;
+}
+
+.logo-img--sticky {
+	display: block;
+	height: 46px;
+	margin: 2px auto;
+}
+
+// Navigation
+#toggle-nav {
+	position: absolute;
+	top: -65px;
+	left: 90%;
+}
+
+#region-menu { 
+	width: 100%;
+	&.is-closed .menu {
+		max-height: 0;
+		overflow: hidden;
+	}
+	.menu {
+		max-height: 25em;
+		/* translate with hardware acceleration */
+		@include transform(translateZ(0));
+		@include transition(max-height, .4s);
+		li {
+			padding: 10px;
+			margin: 0;
+			&:hover { background: rgba($background-header, 0.95); }
+			> a {
+				display: block;
+				text-transform: uppercase;
+				//font-family: 'Arvo Regular', Arial, Helvetica, sans-serif;
+				//font-size: 0.9em;
+				font-weight: bold;
+				@include transition(background, 500ms);
+				&.active { color: $base-color; }
+				&:hover,
+				&:focus,
+				&:active { border-bottom: 0; }
+			}
+		}
+		/* Dropdown */
+		li.expanded {
+			display: none;
+			position: relative;
+			ul.menu {
+				display: none;
+				position: absolute;
+				left: -10px;
+				top: 100%;
+				float: left;
+				background: rgba($background-header, 0.70);
+				text-align: left;
+				> li {
+					margin: 0 10px;
+					a {
+						text-transform: none;
+					}
+				}
+			}
+			&.active {
+				> a:after {
+					@include up-arrow($link-color);
+				}
+				&.active-trail > a:after {
+					@include up-arrow($base-color);
+				}
+				ul.menu {
+					display: block;
+				}
+			}
+			> a:after {
+				@include down-arrow($link-color);
+			}
+			&.active-trail > a:after {
+				@include down-arrow($base-color);
+			}
+		}
+	}
+}
+
+// Quick nav
+#region-quick-access-links {
+	display: none;
+	width: 280px;
+	padding-left: 0;
+	margin-top: 13px;
+	.menu li.first { margin-left: 40px; }
+	.menu li.last { margin-right: 0; }
+	.menu li {
+		display: inline;
+		padding: 0;
+		margin: 0 15px;
+		//font-size: 0.9em;
+		&:hover { border-bottom: solid 1px $link-color; }
+	}
+}
+
+// Language switcher
+#region-language-switcher {
+	margin-top: 35px;
+	.form-select {
+		height: 27px;
+		text-transform: uppercase;
+		font-size: 0.7em;
+		border: none;
+		@include border-radius(5px);
+		cursor: pointer;
+		option { padding: 10px; }
+	}
+}
+
+// Search form
+#region-search-form {
+	display: none;
+	margin-top: 10px;
+	.content {
+		width: 180px;
+	}
+	.form-item,
+	.form-actions {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.form-item { float: left; }
+	.form-actions { 
+		float: right;
+		//margin-top: 1px;
+	}
+	.form-item input {
+		width: 155px;
+		height: 25px;
+		padding-left: 10px;											// TODO: common styles for forms
+		color: #aaa;
+		border: solid 1px #ccc;
+		border-right: 0;
+		//@include border-radius(5px 0 0 5px);
+	}
+}
+
+// Banner
+#zone-header-banner {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 1;
+	.region-banner {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.header-banner { width: 100%; }
+}
+
+//////////////////////////////////////////
+
+/* Special button (menu mobile button) */
+.lines-button {
+	padding: 10px 0;
+	@include transition(all, .3s);
+	cursor: pointer;
+	user-select: none;
+	@include border-radius(0.57143rem);
+	border: none;
+  	background: none;
+
+	&:active { @include transition(all, 0); }
+	&.close {
+		@include transform(scale3d(0.8, 0.8, 0.8));
+		.lines {
+			background: transparent;
+		}
+		.lines:before,
+		.lines:after {
+			@include transform(50% 50%, -origin);
+			top: 0;
+			width: 2.5rem;
+		}
+		.lines:before {
+			@include transform(rotate3d(0, 0, 1, 45deg));
+		}
+		.lines:after {
+			@include transform(rotate3d(0, 0, 1, -45deg));
+		}
+	}
+}
+
+.lines {
+	display: inline-block;
+	width: 2.5rem;
+	height: 0.45rem;
+	background: $link-color;
+	@include border-radius(0.28571rem);
+	@include transition(all, .3s);
+	position: relative;
+	&:before,
+	&:after {
+		display: inline-block;
+		width: 2.5rem;
+		height: 0.45rem;
+		background: $link-color;
+		@include border-radius(0.28571rem);
+		@include transition(all, .3s);
+		position: absolute;
+		left: 0;
+		content: '';
+		@include transform(0.28571rem center, -origin);
+	}
+	&:before { top: 0.75rem; }
+	&:after { top: -0.75rem; }
+}

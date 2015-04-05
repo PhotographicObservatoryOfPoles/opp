@@ -1,0 +1,212 @@
+// All styles for maps pages (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+
+/* Arctic map */
+#region-preface.region-preface--map {
+	top: 20px;
+	left: 0;
+
+	h1 {
+		padding: 10px 24px;
+	}
+}
+
+.map-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	/* filtres */
+	#region-sidebar-left {
+		position: absolute;
+		left : 0px;
+		top: 95px;
+
+		.block-views {
+			width: 100%;
+			padding: 0;
+			background: rgba(255, 255, 255, 0.8);
+			margin-bottom: 20px;
+
+			+ .block-views {
+				margin-bottom: 0;
+			}
+		}
+
+		h2 {
+			padding: 20px 0;
+			margin-bottom: 0;
+			text-align: center;
+			font-family: $main-font;
+			font-size: 14px;
+		}
+
+		.filters {
+			padding: 0 25px 15px 25px;
+		}
+
+		.block-filters-block-themes-filters .filters {
+			padding-left: 50px;
+		}
+
+		.filters-theme {
+			list-style-type: disc;
+			list-style-position: outside;
+			.filter {
+				@include link-color();
+			}
+		}
+
+		.filter > a {
+			display: block;
+			padding: 5px 0 5px 20px;
+
+			&:hover {
+				color: $link-color;
+				background: rgba(232, 232, 232, 0.7);
+				border-bottom: 0;
+			}
+
+			&:active,
+			&:focus {
+				color: $link-color;
+				border-bottom: 0;
+			}
+
+			&.is-selected {
+				font-weight: bold;
+				color: #123F4F;
+				background: rgba(232, 232, 232, 0.7);
+			}
+		}
+	}
+
+	/* Carte svg */
+	svg {
+		//background: #eee;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+
+		/* zoom button */
+		foreignObject.fo-zoom-button {
+
+			body.body-zoom-button {
+
+				//background: $grey; // surcharge du body principal
+				background: rgba(255, 255, 255, 0.8); // surcharge du body principal
+
+				div.zoom-button {
+					width: 40px;
+					height: 40px;
+
+					cursor: pointer;
+				}
+
+			}
+		}
+
+		/* construction carte */
+		.sphere {
+			fill: $sphere-color;
+		}
+
+		.land {
+			fill: $land-color;
+		}
+
+		.boundary {
+			fill: none;
+			stroke: $stroke-color;
+			stroke-linejoin: round;
+			stroke-linecap: round;
+			vector-effect: non-scaling-stroke;
+		}
+
+		.overlay {
+			fill: none;
+			pointer-events: all;
+		}
+
+		/* foreignObjects (tooltips) */
+		.fo_tooltip {
+
+			text-transform: uppercase;
+
+			visibility: hidden;
+
+			body.info_item {
+      			min-width: 100%;
+				//height: 100%;
+				display: block;
+				position: absolute;
+				top : 30px;
+				//background: $grey; // surcharge du body principal
+				background: rgba(255, 255, 255, 0.8); // surcharge du body principal
+
+				div.info_item {
+					//width: 80%;
+					//height: 200px;
+
+					p.type_item {
+					    //border-bottom: 1px solid;
+					    //font-size: 13px;
+					    //margin: 0 30px;
+					    margin : auto;
+					    padding: 5px 0 0;
+					    //text-align: center;
+					    //text-transform: none;
+					    width: 90%;
+					}
+
+					h2 {
+						margin : 15px auto 10px auto;
+						//text-align: center;
+					    width: 90%;
+					}
+
+					img.img_item {
+						width: 90%;
+						height: auto;
+						display: block;
+						margin: auto;
+					}
+
+					button.discover-button {
+						background: $link-color;
+						color: white;
+				    	border: none;
+				    	display: block;
+				    	margin: 20px auto;
+				    	padding: 10px 20px;
+				    	text-shadow: none;
+				    	width: 90%;
+				    	font-size: 1.3em;
+				    	font-weight: normal;
+				    	font-family: $main-font;
+
+				    	@include border-radius(0);
+
+				    	&:hover {
+				    		background: $link-hover;
+				    	}
+					}
+
+				}
+			}
+		}
+			
+		/* Balises */
+		path.item {
+			cursor: pointer;
+			@include dot-color();
+		}
+	}
+}
+
+
+/* Antarctic map */

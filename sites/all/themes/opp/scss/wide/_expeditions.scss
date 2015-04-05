@@ -1,0 +1,228 @@
+// All styles for expeditions pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* All expeditions page */
+.page-expeditions {
+
+	.container-12 .grid-8 {
+		width: 780px !important;
+	}
+
+	.container-12 .grid-4 {
+		width: 380px !important;
+	}
+
+	.region-sidebar-left--expeditions {
+		width: 780px;
+		
+		/*h3 {
+			margin-bottom : 180px;
+		}*/
+	}
+
+	.region-main-content--expeditions {
+		.views-row {
+			max-width: 380px;
+			width: 100%;
+			overflow: hidden;
+			float: left;
+			margin: 10px;
+		}
+	}
+}
+
+/* First page expedition */
+.wrapper-expedition{
+	/* Full width */
+	#zone-content{
+		//width: 100%;
+		#region-main-content{
+			//width: 100%;
+			//margin : 0;
+			.group-left{
+				width: 100%;
+				position: relative;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.group-right{
+				position: absolute;
+				width: 38%;
+				height: auto;
+				padding: 2%;
+				background: rgba(255,255,255,0.8);
+				top: 20%;
+				right: 30px;
+				.field-name-title{
+					font-family: Rockwell;
+					font-weight: normal;
+					font-size: 1.2em;
+					margin-bottom: 8px;
+				}
+				.field-name-field-description{
+					margin-top: 15px;
+					margin-bottom: 40px;
+				}
+				.menu{
+					float: right;
+					.leaf{
+						display: none;
+					}
+					.collapsed{
+						display: none;
+					}
+					.first{
+						display: block;
+						a{
+							background: $link-color;
+							color: $text-hover;
+							padding: 10px;
+							&:hover{
+								background: $link-hover;
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Slide Page */
+.wrapper-slide{
+	margin-top: -50px;
+	#zone-content{
+		width: 100%;
+		#region-main-content{
+			width: 100%;
+			margin : 0;
+			position: relative;
+			.group-header{
+				.field-name-voir-plus{
+					position: absolute;
+					z-index: 99;
+					top: 0;
+					right: 0;
+					width: 80px;
+					height: 80px;
+					background: $link-hover;
+					color: white;
+					cursor: pointer;
+					text-align: center;
+					line-height: 80px;
+					&:hover{
+						background: $link-hover;
+					}
+					p{
+						font-size: 5em;
+					}
+				}
+				.field-name-chapter-nav{
+					position: absolute;
+					z-index: 98;
+					top: 0;
+					right: 0;
+					width: 25%;
+					height: auto;
+					background: $link-color;
+					padding-top: 80px;
+					ul{
+						padding: 0;
+						margin: 0;
+						display: block;
+						width: 100%;
+						li{
+							margin: 0;
+							padding: 3%;
+							width: 94%;
+							height: 40px;
+							line-height: 40px;
+							display: inline-block;
+							&:hover{
+								background: $link-hover;
+							}
+							a{
+								text-decoration: none;
+								color: white;
+								width: 100%;
+								display: inline-block;
+							}
+							ul{
+								display: none;
+							}
+						}
+						.active-trail{
+							background: $selected-color;
+							font-weight: bold;
+							&:hover{
+								background: $selected-color;
+							}
+						}
+					}
+				}
+			}
+			.group-left{
+				width: 100%;
+				position: relative;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.group-right{
+				position: absolute;
+				width: 40%;
+				height: auto;
+				padding: 2%;
+				background: rgba(255,255,255,0.8);
+				bottom: 50px;
+				right: 2%;
+				h2{
+					//font-size: 1.4em;
+					//font-family: Rockwell;
+					//color : $link-color;
+				}
+			}
+			.arrow-div{
+				font-size: 8em;
+				font-weight: bold;
+				position: absolute;
+				top: 40%;
+				width: 100%;
+				z-index: 97;
+				a{
+					color: $text-hover;
+					text-decoration: none;
+					opacity: 0.5;
+					&:hover{
+						opacity: 1;
+						text-decoration: none;
+					}
+				}
+				.arrow-prev{
+					float: left;
+				}
+				.arrow-next{
+					float: right;
+				}
+			}
+			.group-footer{
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				ul.menu{
+					li a{
+						text-decoration: none;
+						color: white;
+					}
+				}	
+			}
+		}
+	}
+}

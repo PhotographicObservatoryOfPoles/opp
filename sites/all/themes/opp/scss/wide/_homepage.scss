@@ -1,0 +1,68 @@
+// All styles for homepage (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* Slideshow */
+#zone-header-banner.homepage-slideshow {
+	display: inline-block;
+}
+
+/* Map link */
+.region-preface--map-link {
+	&.grid-12 { display: block; }
+
+	.map-link {
+		left: 60%;
+	}
+}
+
+/* Last galleries and last expeditions */
+.last-gallery,
+.last-expedition {
+	max-height: 200px;
+	overflow: hidden;
+
+	figure {
+		max-width: 280px;
+		float: left;
+		margin-right: 15px;
+	}
+
+	
+	.last-gallery-infos {
+		padding-left: 0;
+	}
+}
+
+
+/* Random contributors */
+.region-postscript--random-contributors {
+	.view-content {
+		width: 100%;
+	}
+
+	.content {
+		width: 100%;
+	}
+}
+
+.random-contributor {
+	display: inline-block;
+	margin: 0 10px;
+	width: 180px;
+
+	&.views-row-first { margin-left: 0; }
+	&.views-row-last { margin-right: 0; }
+
+	&.views-row-even { float: left; }
+	&.views-row-odd { float: left; }
+
+	.views-field-picture {
+		img {
+			width: 180px;
+			height: 180px;
+		}
+	}
+}

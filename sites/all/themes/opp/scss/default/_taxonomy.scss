@@ -1,0 +1,42 @@
+// All styles for taxonomy page (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+/* Taxonomy page */
+.region-main-content--taxonomy {
+
+	.content {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.views-row {
+		max-width: 380px;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+		margin: 10px;
+	}
+
+	.figure-w-hover figcaption {
+		padding: 2em;
+
+		h3 {
+			margin: 5px 0 20px 0;
+		}
+
+		p.tag {
+			font-size: 0.9em;
+		}
+
+		p.type {
+			margin: 5px 0 20px 0;
+		}
+
+		.link--view-more > a { 
+			font-size: 0.8em;
+		}
+	}
+}

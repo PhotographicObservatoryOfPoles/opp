@@ -1,0 +1,20 @@
+// All styles commons for all pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+// Title
+h1 {
+	display: inline-block;
+}
+
+// Page with a narrow content wrapper (i.e. "Observatoire", "Galeries", "Expéditions")
+.zone-content-wrapper--narrow {
+	margin-top: 130px;
+}
+
+// Regions (preface, content, sidebar, etc.)
+#region-preface {
+	display: inline-block;
+}

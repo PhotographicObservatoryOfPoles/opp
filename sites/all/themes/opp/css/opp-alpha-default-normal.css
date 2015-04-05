@@ -1,0 +1,900 @@
+@charset "UTF-8";
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+/* Basis */
+/* This file will contain scss code that all files should inherit,
+ * such as @import statements (for importing Compass or other libraries) and global variables such as color values. */
+/* This file will contains all the mixins */
+@font-face {
+  font-family: 'Arvo Regular';
+  src: url("../font/arvo/regular/Arvo-Regular-webfont.eot");
+  src: url("../font/arvo/regular/Arvo-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/arvo/regular/Arvo-Regular-webfont.woff") format("woff"), url("../font/arvo/regular/Arvo-Regular-webfont.ttf") format("truetype"), url("../font/arvo/regular/Arvo-Regular-webfont.svg#arvoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../font/open-sans/regular/OpenSans-Regular-webfont.eot");
+  src: url("../font/open-sans/regular/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/regular/OpenSans-Regular-webfont.woff") format("woff"), url("../font/open-sans/regular/OpenSans-Regular-webfont.ttf") format("truetype"), url("../font/open-sans/regular/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../font/open-sans/semibold/OpenSans-Semibold-webfont.eot');
+    src: url('../font/open-sans/semibold/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/open-sans/semibold/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../font/open-sans/semibold/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../font/open-sans/semibold/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+/* Background pattern from subtlepatterns.com */
+/* From logo's color */
+/* Map */
+/* Common styles */
+/* line 8, ../scss/normal/_header.scss */
+#zone-header-bottom-wrapper {
+  background: transparent;
+}
+/* line 10, ../scss/normal/_header.scss */
+#zone-header-bottom-wrapper .region-menu {
+  width: 700px;
+  left: 250px;
+  top: -50px;
+}
+/* line 16, ../scss/normal/_header.scss */
+#zone-header-bottom-wrapper.is-sticky .region-menu {
+  background: none;
+}
+
+/* line 23, ../scss/normal/_header.scss */
+#region-menu .menu {
+  text-align: center;
+  margin-left: -12px;
+  margin-right: -12px;
+  /* Dropdown */
+}
+/* line 27, ../scss/normal/_header.scss */
+#region-menu .menu li.first {
+  margin-left: 0;
+}
+/* line 28, ../scss/normal/_header.scss */
+#region-menu .menu li.last {
+  margin-right: 0;
+}
+/* line 29, ../scss/normal/_header.scss */
+#region-menu .menu li {
+  display: inline-block;
+  padding: 0;
+  margin: 0 12px;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 35, ../scss/normal/_header.scss */
+#region-menu .menu li:hover {
+  background: transparent;
+}
+/* line 39, ../scss/normal/_header.scss */
+#region-menu .menu li.expanded {
+  display: inline-block;
+}
+
+/* line 46, ../scss/normal/_header.scss */
+#region-quick-access-links {
+  display: block;
+  padding-left: 180px;
+}
+
+/* line 52, ../scss/normal/_header.scss */
+#region-language-switcher {
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+/* line 58, ../scss/normal/_header.scss */
+#region-search-form {
+  display: block;
+  padding-right: 0;
+}
+/* line 62, ../scss/normal/_header.scss */
+#region-search-form .content {
+  width: 155px;
+}
+/* line 66, ../scss/normal/_header.scss */
+#region-search-form .form-item input {
+  width: 130px;
+}
+
+/* line 70, ../scss/normal/_header.scss */
+#zone-header-banner {
+  display: block;
+}
+
+/* line 8, ../scss/normal/_footer.scss */
+#region-links-footer {
+  width: 580px;
+  padding: 0;
+}
+/* line 11, ../scss/normal/_footer.scss */
+#region-links-footer .menu li {
+  display: inline;
+}
+/* line 13, ../scss/normal/_footer.scss */
+#region-links-footer .menu li:before {
+  content: " | ";
+}
+/* line 14, ../scss/normal/_footer.scss */
+#region-links-footer .menu li:first-child:before {
+  content: none;
+}
+/* line 15, ../scss/normal/_footer.scss */
+#region-links-footer .menu li.first {
+  margin-left: 0;
+}
+/* line 16, ../scss/normal/_footer.scss */
+#region-links-footer .menu li.last {
+  margin-right: 0;
+}
+
+/* line 21, ../scss/normal/_footer.scss */
+#region-copyright {
+  width: 460px;
+}
+
+/* line 8, ../scss/normal/_commons.scss */
+h1 {
+  display: inline-block;
+}
+
+/* line 13, ../scss/normal/_commons.scss */
+.zone-content-wrapper--narrow {
+  margin-top: 130px;
+}
+
+/* line 18, ../scss/normal/_commons.scss */
+#region-preface {
+  display: inline-block;
+}
+
+/* Specific styles */
+/* Slideshow */
+/* line 8, ../scss/normal/_homepage.scss */
+#zone-header-banner.homepage-slideshow {
+  display: inline-block;
+}
+
+/* Map link */
+/* line 14, ../scss/normal/_homepage.scss */
+.region-preface--map-link.grid-12 {
+  display: block;
+}
+
+/* Random contributors */
+/* line 19, ../scss/normal/_homepage.scss */
+.region-postscript--random-contributors .view-content {
+  width: 65%;
+}
+/* line 23, ../scss/normal/_homepage.scss */
+.region-postscript--random-contributors .content {
+  width: 100%;
+}
+
+/* All observatoire pages */
+/* line 9, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire {
+  /*h2{
+  	//font-family: Rockwell;
+  	//font-size: 1.4em;
+  	//font-weight: normal;
+  	//color: $link-color;
+  	//margin-bottom: 15px;
+  }*/
+  /* SOUTENIR ASSOCIATION */
+  /* EQUIPE */
+  /* PARRAINS */
+  /* PARTENAIRES */
+  /* CONTACT */
+}
+/* line 10, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #region-sidebar-left {
+  width: 220px;
+}
+/* line 13, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #region-main-content {
+  width: 700px;
+}
+/* line 23, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #block-menu-menu-menu-observatoire {
+  margin-top: 10px;
+  background: #F5F5F5;
+  float: left;
+  width: 100%;
+}
+/* line 28, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #block-menu-menu-menu-observatoire ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 31, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #block-menu-menu-menu-observatoire ul li {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #D4DFE4;
+}
+/* line 36, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #block-menu-menu-menu-observatoire ul li a {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #2b2727;
+  padding-left: 30px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 51, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #block-menu-menu-menu-observatoire ul li a:hover {
+  background: rgba(49, 131, 162, 0.4);
+  border-bottom: 0;
+}
+/* line 55, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire #block-menu-menu-menu-observatoire ul li a.active {
+  background: rgba(49, 131, 162, 0.4);
+}
+/* line 62, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .content-observatoire {
+  float: left;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* MISSION GENERALE */
+  /* ASSOCIATION */
+}
+/* line 74, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .content-observatoire .list-obs {
+  width: 48%;
+  margin: 2%;
+  margin-left: 0;
+  float: left;
+  vertical-align: top;
+}
+/* line 81, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .content-observatoire iframe {
+  width: 100%;
+  height: 480px;
+}
+/* line 86, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .content-observatoire .links a {
+  background: #3183A2;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 97, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .content-observatoire .links a:hover {
+  background: #103C4C;
+  border-bottom: 0;
+}
+/* line 106, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .content-observatoire .association img {
+  width: 100%;
+  height: auto;
+}
+/* line 114, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations {
+  margin-top: 20px;
+}
+/* line 116, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations h2 {
+  text-align: center;
+}
+/* line 120, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations h3 {
+  display: none;
+}
+/* line 124, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li {
+  float: left;
+  width: 36%;
+  margin: 2%;
+  margin-left: 0px;
+  position: relative;
+  /* Aspect des checkboxes */
+  /* :before sert ├á cr├®er la case ├á cocher */
+  /* Aspect g├®n├®ral de la coche */
+  /* Aspect si "pas coch├®e" */
+  /* Aspect si "coch├®e" */
+}
+/* line 130, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li label {
+  display: inline-block;
+}
+/* line 136, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li [type="checkbox"]:not(:checked) + label:before,
+.wrapper-observatoire .block-paypal-donations ul li [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 17px;
+  height: 17px;
+  /* dim. de la case */
+  border: 1px solid #CACACA;
+  background: #f8f8f8;
+  border-radius: 0px;
+  /* angles arrondis */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 150, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li [type="checkbox"]:not(:checked) + label:after,
+.wrapper-observatoire .block-paypal-donations ul li [type="checkbox"]:checked + label:after {
+  content: '\2713';
+  position: absolute;
+  margin-top: -10px;
+  left: 13px;
+  font-size: 1.6em;
+  left: 4px;
+  color: #3183A2;
+  transition: all .2s;
+  /* on pr├®voit une animation */
+}
+/* line 162, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  /* coche invisible */
+  transform: scale(0);
+  /* mise ├á l'├®chelle ├á 0 */
+}
+/* line 167, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  /* coche opaque */
+  transform: scale(1);
+  /* mise ├á l'├®chelle 1:1 */
+}
+/* line 172, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations ul li [type="text"] {
+  margin-left: 10px;
+  border: 1px solid #CACACA;
+  background: #f8f8f8;
+  border-radius: 0px;
+  /* angles arrondis */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 182, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations .donation-submit-button {
+  margin-top: 20px;
+  display: inline-block;
+  background: #3183A2;
+  width: 220px;
+  padding: 8px;
+  color: white;
+  text-align: center;
+}
+/* line 190, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .block-paypal-donations .donation-submit-button:hover {
+  background: #103C4C;
+}
+/* line 199, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-equipe {
+  text-align: center;
+}
+/* line 201, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-equipe .views-row {
+  width: 28%;
+  margin: 4% 4% 0px 0px;
+  float: left;
+  vertical-align: top;
+  text-align: center;
+}
+/* line 208, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-equipe img {
+  width: 100%;
+  height: auto;
+}
+/* line 217, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-equipe .views-field-field-team-role {
+  height: 55px;
+  font-size: 1em;
+}
+/* line 221, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-equipe .field-content {
+  text-align: center;
+}
+/* line 227, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .citation-parrain {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 231, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .citation-parrain .views-field-field-citation-text {
+  font-size: 16px !important;
+  font-family: 'Arvo Regular';
+  text-align: left;
+  position: relative;
+}
+/* line 236, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .citation-parrain .views-field-field-citation-text::before {
+  content: '\00ab';
+  color: #3183A2;
+  font-size: 6em;
+  font-family: Arial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -0.9em;
+  margin-left: -0.7em;
+  transform: rotate(30deg);
+}
+/* line 248, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .citation-parrain .views-field-field-citation-text::after {
+  content: '\00bb';
+  color: #3183A2;
+  font-size: 6em;
+  font-family: Arial;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -0.6em;
+  margin-right: -0.7em;
+  transform: rotate(30deg);
+}
+/* line 261, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .citation-parrain .views-field-field-citation-author {
+  margin-top: 10px;
+  color: #3183A2;
+  text-align: right;
+}
+/* line 269, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains {
+  margin-top: 40px;
+  text-align: center;
+}
+/* line 272, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row {
+  width: 47%;
+  margin: 1%;
+  float: left;
+  vertical-align: top;
+}
+/* line 277, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-left {
+  text-align: center;
+}
+/* line 279, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-left img {
+  width: 94%;
+  height: auto;
+}
+/* line 284, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-right {
+  padding-top: 15px;
+  text-align: left;
+}
+/* line 287, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-right .views-field-field_parrain_name {
+  font-family: "Arvo Regular", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #103C4C;
+  font-weight: bold;
+}
+/* line 293, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-right .views-field-field_parrain_website {
+  margin-top: 15px;
+}
+/* line 295, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-right .views-field-field_parrain_website a {
+  background: #3183A2;
+  color: white;
+  padding: 5px;
+  content: 'Site personnel';
+}
+/* line 300, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .list-parrains .views-row .group-right .views-field-field_parrain_website a:hover {
+  background: #103C4C;
+}
+/* line 310, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-partenaires {
+  /*margin-top: 40px;*/
+  text-align: center;
+}
+/* line 313, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-partenaires .views-row {
+  width: 47%;
+  margin: 1%;
+  float: left;
+  vertical-align: top;
+}
+/* line 318, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-partenaires .views-row .group-left {
+  text-align: center;
+}
+/* line 320, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-partenaires .views-row .group-left img {
+  width: 90%;
+  height: auto;
+}
+/* line 325, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-partenaires .views-row .group-right {
+  padding-top: 4px;
+  text-align: left;
+}
+/* line 328, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .view-page-partenaires .views-row .group-right .views-field-field_partner_name {
+  font-family: "Arvo Regular", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #103C4C;
+  font-weight: bold;
+}
+/* line 339, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .header-contact {
+  margin-bottom: 1em;
+}
+/* line 343, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .wrapper-contact .form-item {
+  margin-bottom: 1em;
+}
+/* line 345, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .wrapper-contact .form-item label {
+  width: 12%;
+  height: 32px;
+  display: inline-block;
+}
+/* line 350, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .wrapper-contact .form-item select {
+  width: 440px;
+  height: 32px;
+  border: 1px solid #CACACA;
+  background: #f8f8f8;
+  border-radius: 0px;
+  /* angles arrondis */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 358, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .wrapper-contact .form-item input {
+  width: 440px;
+  height: 32px;
+  border: 1px solid #CACACA;
+  background: #f8f8f8;
+  border-radius: 0px;
+  /* angles arrondis */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 366, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .wrapper-contact .form-item textarea {
+  width: 440px;
+  height: 160px;
+  border: 1px solid #CACACA;
+  background: #f8f8f8;
+  border-radius: 0px;
+  /* angles arrondis */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 375, ../scss/normal/_observatoire.scss */
+.wrapper-observatoire .wrapper-contact .webform-submit {
+  margin-left: 14%;
+  width: 440px;
+  height: 40px;
+  background: #3183A2;
+  color: white;
+  border: none;
+  text-shadow: none;
+  border-radius: 0px;
+}
+
+/* All expeditions page */
+/* line 11, ../scss/normal/_expeditions.scss */
+.page-expeditions .container-12 .grid-4 {
+  width: 300px !important;
+}
+/* line 15, ../scss/normal/_expeditions.scss */
+.page-expeditions .container-12 .grid-8 {
+  width: 620px !important;
+}
+/* line 19, ../scss/normal/_expeditions.scss */
+.page-expeditions .region-sidebar-left--expeditions {
+  width: 620px;
+}
+/* line 21, ../scss/normal/_expeditions.scss */
+.page-expeditions .region-sidebar-left--expeditions h3 {
+  margin-bottom: 180px;
+}
+/* line 27, ../scss/normal/_expeditions.scss */
+.page-expeditions .region-main-content--expeditions .views-row {
+  max-width: 300px;
+  overflow: hidden;
+  float: left;
+  margin: 10px;
+}
+
+/* First page expedition */
+/* line 39, ../scss/normal/_expeditions.scss */
+.wrapper-expedition {
+  /* Full width */
+}
+/* line 46, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-left {
+  width: 100%;
+  position: relative;
+}
+/* line 49, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-left img {
+  width: 100%;
+  height: auto;
+}
+/* line 54, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right {
+  position: absolute;
+  width: 38%;
+  height: auto;
+  padding: 2%;
+  background: rgba(255, 255, 255, 0.8);
+  top: 20%;
+  right: 30px;
+}
+/* line 62, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title {
+  font-family: Rockwell;
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  bottom: 0;
+}
+/* line 73, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .field-name-field-description {
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+/* line 77, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu {
+  float: right;
+}
+/* line 79, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .leaf {
+  display: none;
+}
+/* line 82, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .collapsed {
+  list-style-type: none;
+  list-style-image: none;
+}
+/* line 87, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .first a {
+  background: #3183A2;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 2px;
+}
+/* line 95, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .first .collapsed {
+  display: none;
+}
+/* line 98, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .first .first {
+  display: block;
+}
+/* line 100, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .first .first a {
+  background: #3183A2;
+  color: #ffffff;
+  padding: 10px;
+}
+/* line 104, ../scss/normal/_expeditions.scss */
+.wrapper-expedition #zone-content #region-main-content .group-right .field-name-title .menu .first .first a:hover {
+  background: #103C4C;
+}
+
+/* Slide Page */
+/* line 119, ../scss/normal/_expeditions.scss */
+.wrapper-slide {
+  margin-top: -50px;
+}
+/* line 121, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content {
+  width: 100%;
+}
+/* line 123, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content {
+  width: 100%;
+  margin: 0;
+}
+/* line 127, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-voir-plus {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: #103C4C;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  line-height: 80px;
+}
+/* line 139, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-voir-plus:hover {
+  background: #103C4C;
+}
+/* line 142, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-voir-plus p {
+  font-size: 5em;
+}
+/* line 146, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav {
+  position: absolute;
+  z-index: 98;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: auto;
+  background: #3183A2;
+  padding-top: 80px;
+}
+/* line 155, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+/* line 160, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul li {
+  margin: 0;
+  padding: 3%;
+  width: 94%;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+/* line 167, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul li:hover {
+  background: #103C4C;
+}
+/* line 170, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: inline-block;
+}
+/* line 176, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul li ul {
+  display: none;
+}
+/* line 180, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul .active-trail {
+  background: #3183A2;
+  font-weight: bold;
+}
+/* line 183, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-header .field-name-chapter-nav ul .active-trail:hover {
+  background: #3183A2;
+}
+/* line 190, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-left {
+  width: 100%;
+  position: relative;
+}
+/* line 193, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-left img {
+  width: 100%;
+  height: auto;
+}
+/* line 198, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-right {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  padding: 2%;
+  background: rgba(255, 255, 255, 0.8);
+  bottom: 50px;
+  right: 6%;
+}
+/* line 212, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .arrow-div {
+  font-size: 7em;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  z-index: 97;
+}
+/* line 219, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .arrow-div a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.5;
+}
+/* line 223, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .arrow-div a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+/* line 228, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .arrow-div .arrow-prev {
+  float: left;
+}
+/* line 231, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .arrow-div .arrow-next {
+  float: right;
+}
+/* line 235, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-footer {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+/* line 240, ../scss/normal/_expeditions.scss */
+.wrapper-slide #zone-content #region-main-content .group-footer ul.menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* All galleries page */
+/* line 10, ../scss/normal/_galleries.scss */
+.container-12 .region-main-content--galleries.grid-9 {
+  width: 700px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 21, ../scss/normal/_galleries.scss */
+.region-sidebar-left--galleries.grid-3 {
+  display: inline-block;
+}
+
+/* One gallery page */
+/* All contributors page */
+/* line 10, ../scss/normal/_contributors.scss */
+.region-main-content--contributors #views_slideshow_cycle_main_contr-supercontributors_slider .views-field-summary {
+  display: block;
+}
+
+/* One contributor page */
+/* line 18, ../scss/normal/_contributors.scss */
+.container-12 .region-main-content--contributor.grid-8 {
+  width: 620px;
+}
+
+/* line 24, ../scss/normal/_contributors.scss */
+.container-12 .region-sidebar-right--contributor.grid-4 {
+  float: right;
+  display: inline;
+  width: 300px;
+}
+
+/* line 32, ../scss/normal/_contributors.scss */
+.container-12 .region-postscript--contributor.grid-8 {
+  width: 620px;
+}
+
+/* Arctic map */
+/* Antarctic map */
+/* All schools page */
+/* One school page */
+/* All news page */
+/* One new page */
+/* line 11, ../scss/normal/_news.scss */
+.node-news .field-type-image {
+  float: left;
+  margin-right: 20px;
+}
+
+/* Taxonomy page */

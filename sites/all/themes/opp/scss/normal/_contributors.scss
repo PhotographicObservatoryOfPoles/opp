@@ -1,0 +1,35 @@
+// All styles for contributors pages (normal)
+
+// For normal screens devices : i.e. tablets (portrait and landscape) and desktop -> iPad landscape
+// 1024px <= screen width < 1220px
+// Grid (content width = 960px)
+
+/* All contributors page */
+.region-main-content--contributors {
+	#views_slideshow_cycle_main_contr-supercontributors_slider {
+		.views-field-summary {
+			display: block;
+		}
+	}
+}
+
+/* One contributor page */
+.container-12 .region-main-content--contributor {
+	&.grid-8 {
+		width: 620px;
+	}
+}
+
+.container-12 .region-sidebar-right--contributor {
+	&.grid-4 {
+		float: right;
+  		display: inline;
+  		width: 300px;
+	}
+}
+
+.container-12 .region-postscript--contributor {
+	&.grid-8 {
+		width: 620px;
+	}
+}

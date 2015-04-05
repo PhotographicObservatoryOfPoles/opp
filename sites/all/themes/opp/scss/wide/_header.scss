@@ -1,0 +1,69 @@
+// All styles for header pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+// Global header
+#zone-header-bottom-wrapper {
+	background: transparent;
+	.region-menu {
+		width: 805px;
+		left: 310px;
+		top: -50px;
+	}
+
+	&.is-sticky .region-menu {
+		background: none;
+	}
+	
+	.region-sticky-logo { padding-left: 80px; }
+}
+
+// Branding
+#region-branding { padding-left: 75px; }
+
+// Navigation
+#region-menu {
+	.menu {
+		text-align: center;
+		margin-left: -20px;
+  		margin-right: -20px;
+		li.first { margin-left: 0; }
+		li.last { margin-right: 0; }
+		li {
+			display: inline-block;
+			padding: 0;
+			margin: 0 20px;
+			height: 50px;
+			line-height: 50px;
+			&:hover { background: transparent; }
+			//a:hover { border-bottom: 0; }
+		}
+		/* Dropdown */
+		li.expanded {
+			display: inline-block;
+		}
+	}
+}
+
+// Quick nav
+#region-quick-access-links {
+	display: block;
+	padding-left: 225px;
+}
+
+// Language switcher
+#region-language-switcher {
+	margin-top: 11px;
+	margin-right: 10px;
+}
+
+// Search form
+#region-search-form {
+	display: block;
+	padding-right: 75px;
+}
+
+// Banner
+#zone-header-banner { display: block; }

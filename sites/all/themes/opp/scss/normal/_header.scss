@@ -1,0 +1,70 @@
+// All styles for header pages (normal)
+
+// For normal screens devices : i.e. tablets (portrait and landscape) and desktop -> iPad landscape
+// 1024px <= screen width < 1220px
+// Grid (content width = 960px)
+
+// Global header
+#zone-header-bottom-wrapper {
+	background: transparent;
+	.region-menu {
+		width: 700px;
+		left: 250px;
+		top: -50px;
+	}
+
+	&.is-sticky .region-menu {
+		background: none;
+	}
+}
+
+// Navigation
+#region-menu {
+	.menu {
+		text-align: center;
+		margin-left: -12px;
+		margin-right: -12px;
+		li.first { margin-left: 0; }
+		li.last { margin-right: 0; }
+		li {
+			display: inline-block;
+			padding: 0;
+			margin: 0 12px;
+			height: 50px;
+			line-height: 50px;
+			&:hover { background: transparent; }
+			//a:hover { border-bottom: 0; }
+		}
+		/* Dropdown */
+		li.expanded {
+			display: inline-block;
+		}
+	}
+}
+
+// Quick nav
+#region-quick-access-links {
+	display: block;
+	padding-left: 180px;
+}
+
+// Language switcher
+#region-language-switcher {
+	margin-top: 10px;
+	margin-right: 25px;
+}
+
+// Search form
+#region-search-form {
+	display: block;
+	padding-right: 0;
+
+	.content {
+		width: 155px;
+	}
+
+	.form-item input { width: 130px; }
+}
+
+// Banner
+#zone-header-banner { display: block; }

@@ -1,0 +1,36 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+/* Basis */
+@import "base";
+
+/* Common styles */
+// Header
+@import "default/header";
+// Footer
+@import "default/footer";
+// Commons
+@import "default/commons";
+
+/* Specific styles */
+// Home
+@import "default/homepage";
+// Observatoire
+@import "default/observatoire";
+// Expeditions
+@import "default/expeditions";
+// Galleries
+@import "default/galleries";
+// Contributors
+@import "default/contributors";
+// Maps
+@import "default/maps";
+// Schools
+@import "default/schools";
+// News
+@import "default/news";
+// Taxonomy
+@import "default/taxonomy";

@@ -1,0 +1,52 @@
+// All styles for IE browser
+// Base stylesheet : normal
+// Versions : IE 9 and +
+
+/* Basis */
+// @import "base";
+
+/* Header */
+/**
+#section-header { z-index: 1; }
+#zone-header-top-wrapper { background: $background-header; }
+#zone-header-bottom-wrapper {
+	background: $background-header;
+	&.is-sticky { background: $background-header; }
+}
+#region-menu {
+	.menu li.leaf {
+		float: left;
+		margin: 0 10px;
+	}
+}
+#region-search-form {
+	.form-item input.form-text {
+		width: 118px;
+		padding: 5px 0 5px 10px;
+	}
+}
+**/
+
+/* Footer */
+/**
+#region-links-footer {
+	.menu li.leaf { margin: 0 10px; }
+}
+**/
+
+/* Content */
+/**
+#section-content { z-index: 0; }
+**/
+
+// Responsive for IE (only for IE9 and +)
+/**
+// default
+@media all and (max-width: 767px) {}
+// narrow
+@media all and (min-width: 768px) {}
+// normal
+@media all and (min-width: 1024px) {}
+// wide
+@media all and (min-width: 1220px) {}
+**/

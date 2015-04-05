@@ -1,0 +1,374 @@
+// All styles for homepage (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+
+/* Slideshow */
+#zone-header-banner.homepage-slideshow {
+	position: relative;
+	margin-top: -142px;
+	display: none;
+}
+
+#views_slideshow_cycle_main_slideshow-homepage_slider {
+	width: 100%;
+
+  	.views-slideshow-cycle-main-frame,
+  	.views-slideshow-cycle-main-frame-row,
+  	.views-slideshow-cycle-main-frame-row-item {
+  		width: 100% !important;
+  		height: auto;
+	}
+
+	.views-field {
+		position: absolute;
+		padding: 5px 10px;
+		z-index: 200;
+		background: rgba(255,255,255,0.7);
+	}
+
+	.views-field-picture {
+		max-width: 100%;
+		width: 100%;
+		a { display: block; }
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: auto !important;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.views-field-content-type {
+		top: 180px;
+		left: 150px;
+		
+		h3 {
+			font-size: 1.5em;
+		}
+	}
+
+	.views-field-title {
+		top: 235px;
+		left: 150px;
+		//max-width: 330px;
+		width: auto;
+		h2 {
+			font-size: 1.8em;
+			margin-bottom: 0;
+		}
+	}
+}
+
+#block-views-slideshow-homepage-slider {
+	.views-slideshow-controls-bottom {
+		margin: 10px 0;
+		width: 160px;
+		z-index: 200;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -80px;
+
+		.views-slideshow-pager-fields {
+			width: 112px;
+			margin: auto;
+
+			.views-slideshow-pager-field-item {
+				background: url('../img/circle-outline.png') no-repeat center;
+				width: 13px;
+				height: 13px;
+				display: inline-block;
+				cursor: pointer;
+				margin: 0 3px;
+
+				&.active {
+					background: url('../img/circle.png') no-repeat center;
+				}
+			}
+		}
+		
+		.views-slideshow-controls-text {
+			width: 100%;
+
+			.views-slideshow-controls-text-pause { display: none; }
+
+			.views-slideshow-controls-text-previous,
+			.views-slideshow-controls-text-next {
+				position: absolute;
+				top: 2px;
+				width: 16px;
+				height: 16px;
+				overflow: hidden;
+				a { display: none; }
+			}
+
+			.views-slideshow-controls-text-previous {
+				left: 0;
+				background: url('../img/arrow-left.png') no-repeat center;
+			}
+
+			.views-slideshow-controls-text-next {
+				left: 143px;
+				background: url('../img/arrow-right.png') no-repeat center;
+			}
+		}
+	}
+}
+
+/* Map link */
+.region-preface--map-link {
+	&.grid-12 { display: none; }
+
+	background: white;
+	margin: 30px 0;
+	@include box-shadow(0 0 10px 0 rgba(207, 209, 210, 1));
+
+	.map-link-wrapper {
+		background: url('../img/northernhem-nb.png') no-repeat -30px center;
+		height: 150px;
+	}
+
+	.fake-map-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+
+	.map-link {
+		position: relative;
+		top: 0;
+		left: 55%;
+		padding: 24px 0;
+		display: block;
+		width: 385px;
+
+		h2 {
+			font-size: 2em;
+			margin-bottom: 0;
+		}
+
+		p {
+			font-size: 1.2em;
+			margin-bottom: 0;
+		}
+	}
+
+	&:hover {
+
+		.map-link h2,
+		.map-link p {
+	-webkit-transition: 0.6s;
+	   -moz-transition: 0.6s;
+		 -o-transition: 0.6s;
+		    transition: 0.6s;
+			color: $link-color;
+		}
+
+		.map-link-wrapper {
+	-webkit-transition: 0.6s;
+	   -moz-transition: 0.6s;
+		 -o-transition: 0.6s;
+		    transition: 0.6s;
+			background: url('../img/northernhem.png') no-repeat -30px center;
+		}
+	}
+	
+}
+
+/* Last galleries and last expeditions */
+.region-sidebar-left--last-galleries,
+.region-sidebar-right--last-expeditions {
+	margin: 20px 0;
+
+	.view-content {
+		@include clearfix();
+	}
+
+	.more-link {
+		position: relative;
+		float: right;
+		display: inline-block;
+		background: #358DAC;
+		a {
+			display: block;
+			padding: 5px 10px;
+			@include border-radius(3px);
+			color: white;
+			text-align: center;
+
+			&:hover {
+				background: #113E4E;
+			}
+		}
+	}
+}
+
+.last-gallery,
+.last-expedition {
+	position: relative;
+	margin-bottom: 20px;
+	background: white;
+	@include clearfix();
+	@include box-shadow(0 0 10px 0 rgba(18, 63, 79, 0.3));
+
+	figure {
+		max-width: 100%;
+		//max-width: 280px;
+		overflow: hidden;
+		//float: left;
+		//margin-right: 15px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.figure-w-hover figcaption {
+		padding: 1em;
+	}
+
+	.last-gallery-infos {
+		padding: 8px 14px;
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		h3 {
+			margin-bottom: 5px;
+		}
+	}
+
+	p.tag {
+		display: inline-block;
+		background: $link-color;
+		padding: 0 5px;
+		margin-bottom: 5px;
+		font-size: 0.9em;
+		color: white;
+		> a { color: white; }
+	}
+
+	p.description {
+		margin-bottom: 0;
+	}
+
+	.link--view-more > a {
+		opacity: 0;
+	}
+
+	.fake-link--view-more > a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+
+	&:hover	{
+		img {
+			opacity: 0.6;
+			@include transform(scale3d(1.15,1.15,15));
+		}
+
+		.link--view-more > a {
+			opacity: 1;
+		}
+
+		.last-gallery-infos h2 > a,
+		.last-gallery-infos h3 > a {
+			color: $link-hover;
+		}
+
+		p.tag {
+			background: $link-hover;
+		}
+	}
+}
+
+/* Random contributors */
+.region-postscript--random-contributors {
+	margin: 15px 0 20px 0;
+	border-top: 1px dotted silver;
+
+	.view-content {
+		@include clearfix();
+		padding: 10px 0;
+		width: 405px;
+		margin: auto;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 33px 0 10px 0;
+	}
+
+	.more-link {
+		position: relative;
+		text-align: center;
+		margin-top: 15px;
+		a {
+			display: inline-block;
+			padding: 5px 10px;
+			background: #358DAC;
+			color: white;
+			&:hover {
+				background: #113E4E;
+			}
+		}
+	}
+}
+
+.random-contributor {
+	margin: 10px;
+	max-width: 180px;
+	width: 100%;
+	@include box-shadow(0 0 10px 0 rgba(18, 63, 79, 0.3));
+	display: inline-block;
+
+	.views-field-picture {
+		img {
+			height: 180px;
+			max-width: 180px;
+			width: 100%;
+		}
+	}
+
+	.views-field-name {
+		text-align: center;
+		//font-size: 0.90em;
+		background: white;
+		a {
+			display: block;
+			padding: 5px 0;
+			color: #113E4E;
+		}
+	}
+
+	.figure-w-hover figcaption {
+		h3 {
+			padding: 20px;
+			font-size: 1em;
+
+			a {
+				color: $link-hover;
+			}
+		}
+
+		p {
+			color: white;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			font-size: 0.9em;
+		}
+	}
+}
+

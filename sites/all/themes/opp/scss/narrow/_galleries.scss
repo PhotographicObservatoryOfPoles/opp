@@ -1,0 +1,15 @@
+// All styles for galleries pages (narrow)
+
+// For medium screens devices : i.e. tablets (portrait) and small tablets -> iPad portrait
+// 768px <= screen width < 1024px
+// Grid (content width = 720px)
+
+/* All galleries page */
+// Galleries
+.container-12 .region-main-content--galleries {
+	&.grid-9 {
+		width: 81%;
+	}
+}
+
+/* One gallery page */

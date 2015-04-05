@@ -1,0 +1,42 @@
+// All styles for news pages (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+/* All news page */
+.region-main-content--news {
+	.views-row {
+		max-width: 380px;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+		margin: 10px;
+	}
+
+	.figure-w-hover figcaption {
+		padding: 2em;
+
+		h2 {
+			font-size: 1.3em;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/* One new page */
+.node-news {
+	padding-top: 10px;
+
+	.field-type-image {
+		float: none;
+		margin-bottom: 20px;
+
+		img {
+			display: block;
+			margin: auto;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

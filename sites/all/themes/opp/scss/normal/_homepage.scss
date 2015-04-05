@@ -1,0 +1,26 @@
+// All styles for homepage (normal)
+
+// For normal screens devices : i.e. tablets (portrait and landscape) and desktop -> iPad landscape
+// 1024px <= screen width < 1220px
+// Grid (content width = 960px)
+
+/* Slideshow */
+#zone-header-banner.homepage-slideshow {
+	display: inline-block;
+}
+
+/* Map link */
+.region-preface--map-link {
+	&.grid-12 { display: block; }
+}
+
+/* Random contributors */
+.region-postscript--random-contributors {
+	.view-content {
+		width: 65%;
+	}
+
+	.content {
+		width: 100%;
+	}
+}

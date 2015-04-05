@@ -1,0 +1,39 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+
+// For medium screens devices : i.e. tablets (portrait) and small tablets -> iPad portrait
+// 768px <= screen width < 1024px
+// Grid (content width = 720px)
+
+/* Basis */
+@import "base";
+
+/* Common styles */
+// Header
+@import "narrow/header";
+// Footer
+@import "narrow/footer";
+// Commons
+@import "narrow/commons";
+
+/* Specific styles */
+// Home
+@import "narrow/homepage";
+// Observatoire
+@import "narrow/observatoire";
+// Expeditions
+@import "narrow/expeditions";
+// Galleries
+@import "narrow/galleries";
+// Contributors
+@import "narrow/contributors";
+// Maps
+@import "narrow/maps";
+// Schools
+@import "narrow/schools";
+// News
+@import "narrow/news";
+// Taxonomy
+@import "narrow/taxonomy";

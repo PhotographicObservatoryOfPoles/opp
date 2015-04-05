@@ -1,0 +1,20 @@
+// All styles commons for all pages (narrow)
+
+// For medium screens devices : i.e. tablets (portrait) and small tablets -> iPad portrait
+// 768px <= screen width < 1024px
+// Grid (content width = 720px)
+
+// Title
+h1 {
+	display: inline-block;
+}
+
+// Page with a narrow content wrapper (i.e. "Observatoire", "Galeries", "Expéditions")
+.zone-content-wrapper--narrow {
+	margin-top: 130px;
+}
+
+// Regions (preface, content, sidebar, etc.)
+#region-preface {
+	display: inline-block;
+}

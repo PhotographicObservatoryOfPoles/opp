@@ -1,0 +1,98 @@
+/* This file will contain scss code that all files should inherit,
+ * such as @import statements (for importing Compass or other libraries) and global variables such as color values. */
+
+// ------ Imports
+@import "compass/utilities/general/clearfix";
+@import "mixins";
+
+// ------ Fonts
+// Arvo Regular
+@font-face {
+    font-family: 'Arvo Regular';
+    src: url('../font/arvo/regular/Arvo-Regular-webfont.eot');
+    src: url('../font/arvo/regular/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/arvo/regular/Arvo-Regular-webfont.woff') format('woff'),
+         url('../font/arvo/regular/Arvo-Regular-webfont.ttf') format('truetype'),
+         url('../font/arvo/regular/Arvo-Regular-webfont.svg#arvoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Open Sans
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/open-sans/regular/OpenSans-Regular-webfont.eot');
+    src: url('../font/open-sans/regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/open-sans/regular/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../font/open-sans/regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../font/open-sans/regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../font/open-sans/semibold/OpenSans-Semibold-webfont.eot');
+    src: url('../font/open-sans/semibold/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/open-sans/semibold/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../font/open-sans/semibold/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../font/open-sans/semibold/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+
+// ------ Global variables
+
+// Fonts
+$main-font: 'Open Sans', Arial, Helvetica, sans-serif;
+$title-font: 'Arvo Regular', Arial, Helvetica, sans-serif;
+//$handwritten-font: ?
+
+// Background
+/* Background pattern from subtlepatterns.com */
+$background-pattern: url('../img/pattern/subtle_grunge.png');
+$background-color: #e5e5e5; // light gray
+
+$background-header: white;
+$background-footer: white;
+
+// Colors
+
+
+/* From logo's color */
+$base-color: #103C4C; 		// dark blue
+$link-color: #3183A2; 		// light blue
+$link-hover: #103C4C; 		// dark blue
+$selected-color: #3183A2; 
+
+$text-hover: #ffffff; 		// white
+
+$menu-observatoire: #adced6; //light blue
+$text-observatoire: #2b2727; // dark grey
+$back-observatoire: #ededed; //white blue
+$border-form: #CACACA; //light grey
+
+/* Map */
+//$grey: rgba(200, 200, 200, 0.5); // grey with opacity (for backgrounds)
+$sphere-color: #93C2DA; //#add0ed;
+$land-color: #F9F9E5; //#9abc68
+$stroke-color: #C4C6B9; //darken($land-color, 50%);
+// Tags (themes)
+$tag_default-color: silver;
+$tag_1-color: #ffC11C;
+$tag_2-color: #EF4FC8; //#FFFF00; // pink
+$tag_3-color: #000000; //#808080; // black
+$tag_4-color: #0DD0D0; //#70ffff; // cyan
+$tag_5-color: #9340CB; //#185aff; // purple
+$tag_6-color: #4AD741; //#96ff51; // green
+$tag_7-color: #F93900; //#f2421c; // red
+$tag_8-color: #a52a2a;
+$tag_9-color: #FFFFFF;
+
+// Icons
+//$home-icon:
+//$map-icon:
+//$theme-icon:
+

@@ -1,0 +1,384 @@
+// All styles for expeditions pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* All observatoire pages */
+.wrapper-observatoire{
+	#region-sidebar-left{
+		width: 280px;
+	}
+	#region-main-content{
+		width: 880px;
+	}
+	#block-menu-menu-menu-observatoire{
+		margin-top: 10px;
+		background: #F5F5F5;
+		float: left;
+		width: 100%;
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				text-align: left;
+				margin: 0;
+				padding: 0;
+				border-bottom: 1px solid #D4DFE4;
+				a{
+					font-size: 1.1em;
+					font-weight: bold;
+					display: inline-block;
+					width: 100%;
+					height: 50px;
+					line-height: 50px;
+					color: $text-observatoire;
+					padding-left: 50px;
+					box-sizing:border-box;
+					padding-left: 50px;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+				}
+				a:hover {
+					background: rgba(49, 131, 162, 0.4);
+					border-bottom: 0;
+				}
+				a.active {
+					background: rgba(49, 131, 162, 0.4);
+				}
+
+			}
+		}
+	}
+	.content-observatoire{
+		float: left;
+		//font-size: 0.9em;
+		padding-left: 15px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		div{
+			//text-align: justify;
+		}
+
+		/* MISSION GENERALE */
+		.list-obs{
+			width: 48%;
+			margin: 2%;
+			margin-left: 0;
+			float: left;
+			vertical-align: top;
+		}
+		iframe{
+			width: 100%;
+			height: 480px;
+		}
+		.links{
+			a{
+				background: $link-color;
+				color: white;
+				display: inline-block;
+				text-align: center;
+				padding-left: 10px;
+				padding-right: 10px;
+				height: 40px;
+				line-height: 40px;
+				//font-family: Rockwell;
+				//font-size: 1.1em;
+				&:hover {
+					background: $link-hover;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		/* ASSOCIATION */
+		.association{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	/* SOUTENIR ASSOCIATION */
+	.block-paypal-donations{
+		margin-top: 20px;
+		h2{
+			text-align: center;
+			//font-size: 1.1em;
+		}
+		h3{
+			display: none;
+		}
+		ul{
+			li{
+				float: left;
+				width: 36%;
+				margin: 2%;
+				margin-left: 0px;
+				position: relative;
+				label{
+					display: inline-block;
+					margin-left: 10px;
+				}
+				/* Aspect des checkboxes */
+				/* :before sert à créer la case à cocher */
+				[type="checkbox"]:not(:checked) + label:before,
+				[type="checkbox"]:checked + label:before {
+				  content: '';
+				  position: absolute;
+				  left:0px;
+				  width: 17px; 
+				  height: 17px; /* dim. de la case */
+				  border: 1px solid $border-form;
+				  background: #f8f8f8;
+				  border-radius: 0px; /* angles arrondis */
+				  box-shadow: inset 0 1px 3px rgba(0,0,0,.2) /* légère ombre interne */
+				}
+				 
+				/* Aspect général de la coche */
+				[type="checkbox"]:not(:checked) + label:after,
+				[type="checkbox"]:checked + label:after {
+				  content: '\2713';
+				  position: absolute;
+				  margin-top: -10px;
+				  left: 13px;
+				  font-size: 1.6em;
+				  left: 4px;
+				  color: $link-color;
+				  transition: all .2s; /* on prévoit une animation */
+				}
+				/* Aspect si "pas cochée" */
+				[type="checkbox"]:not(:checked) + label:after {
+				  opacity: 0; /* coche invisible */
+				  transform: scale(0); /* mise à l'échelle à 0 */
+				}
+				/* Aspect si "cochée" */
+				[type="checkbox"]:checked + label:after {
+				  opacity: 1; /* coche opaque */
+				  transform: scale(1); /* mise à l'échelle 1:1 */
+				}
+
+				[type="text"]{
+					margin-left: 10px;
+				  border: 1px solid $border-form;
+				  background: #f8f8f8;
+				  border-radius: 0px; /* angles arrondis */
+				  box-shadow: inset 0 1px 3px rgba(0,0,0,.2) /* légère ombre interne */
+				}
+
+			}
+		}
+		.donation-submit-button{
+			margin-top: 20px;
+			display: inline-block;
+			background: $link-color;
+			width: 220px;
+			padding: 8px;
+			color: white;
+			text-align: center;
+			&:hover{
+				background: $link-hover;
+			}
+		}
+
+	}
+
+	/* EQUIPE */
+	.view-page-equipe{
+		text-align: center;
+		.views-row{
+			width: 28%;
+			margin : 4% 4% 0px 0px;
+			float:left;
+			vertical-align: top;
+			text-align: center;
+		}
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.views-field-field-team-name{
+			//font-size: 1.2em;
+			//font-family: Rockwell;
+			color: $link-color;
+		}
+		.views-field-field-team-role{
+			height: 55px;
+			font-size: 1em;
+		}
+		.field-content{
+			text-align: center;
+		}
+	}
+
+	/* PARRAINS */
+	.citation-parrain{
+		width: 60%;
+		text-align: center;
+		margin: 0 auto;
+			.views-field-field-citation-text{
+				font-size: 16px!important;
+				font-family: 'Arvo Regular';
+				text-align: left;
+				position: relative;
+				&::before { 
+				  content: '\00ab';
+				  color: $link-color;
+				  font-size: 6em;
+				  font-family: Arial;
+				  position: absolute;
+				  top: 0;
+				  left: 0;
+				  margin-top: -0.9em;
+				  margin-left: -0.7em;
+				  transform: rotate(30deg);
+				}
+				&::after{ 
+				  content: '\00bb';
+				  color: $link-color;
+				  font-size: 6em;
+				  font-family: Arial;
+				  position: absolute;
+				  bottom: 0;
+				  right: 0;
+				  margin-bottom: -0.6em;
+				  margin-right:-0.7em;
+				  transform: rotate(30deg);
+				}
+			}
+			.views-field-field-citation-author{
+				margin-top: 10px;
+				color: $link-color;
+				text-align: right;
+			}
+
+	}
+
+	.list-parrains{
+		margin-top: 40px;
+		text-align: center;
+		.views-row{
+			width: 47%;
+			margin: 1%;
+			float: left;
+			vertical-align: top;
+			.group-left{
+				text-align: center;
+				img{
+					width: 94%;
+					height: auto;
+				}
+			}
+			.group-right{
+				padding-top: 15px;
+				text-align: left;
+				.views-field-field_parrain_name{
+					font-family: $title-font;
+					font-size: 16px;
+					color: $base-color;
+					font-weight: bold;
+				}
+				.views-field-field_parrain_website{
+					margin-top: 15px;
+					a{
+						background: $link-color;
+						color: white;
+						padding: 5px;
+						content: 'Site personnel';
+						&:hover{
+							background: $link-hover;
+						}
+					}	
+				}
+			}
+		}
+	}
+		
+	/* PARTENAIRES */
+	.view-page-partenaires{
+		text-align: center;
+		.views-row{
+			width: 47%;
+			margin: 1%;
+			float: left;
+			vertical-align: top;
+			.group-left{
+				text-align: center;
+				img{
+					width: 90%;
+					height: auto;
+				}
+			}
+			.group-right{
+				padding-top: 4px;
+				text-align: left;
+				.views-field-field_partner_name{
+					font-family: $title-font;
+					font-size: 16px;
+					color: $base-color;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	/* CONTACT */
+	.header-contact{
+		margin-bottom: 1em;
+	}
+	.wrapper-contact{
+		.form-item{
+			margin-bottom: 1em;
+			label{
+				width: 12%;
+				height: 32px;
+				display: inline-block;
+			}
+			select{
+				width: 440px;
+				height: 32px;
+				border: 1px solid $border-form;
+				background: #f8f8f8;
+				border-radius: 0px; /* angles arrondis */
+				box-shadow: inset 0 1px 3px rgba(0,0,0,.2) /* légère ombre interne */
+			}
+			input{
+				width: 440px;
+				height: 32px;
+				border: 1px solid $border-form;
+				background: #f8f8f8;
+				border-radius: 0px; /* angles arrondis */
+				box-shadow: inset 0 1px 3px rgba(0,0,0,.2) /* légère ombre interne */
+			}
+			textarea{
+				width: 440px;
+				height: 160px;
+				border: 1px solid $border-form;
+				background: #f8f8f8;
+				border-radius: 0px; /* angles arrondis */
+				box-shadow: inset 0 1px 3px rgba(0,0,0,.2) /* légère ombre interne */
+			}
+		}
+		.webform-submit{
+			margin-left: 14%;
+			width: 440px;
+			height: 40px;
+			background: $link-color;
+			color: white;
+			//font-family: Rockwell;
+			//font-size: 1.1em;
+			//font-weight: normal;
+			border: none;
+			text-shadow: none;
+			border-radius: 0px;
+		}
+
+	}
+
+
+
+}
+

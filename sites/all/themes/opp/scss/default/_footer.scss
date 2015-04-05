@@ -1,0 +1,56 @@
+// All styles for footer (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+// Global footer
+#section-footer {
+	background: $background-header; 
+	background: rgba($background-header, 1);
+	padding: 10px;
+	-webkit-box-shadow: 0 0 10px 0 rgba(18, 63, 79, 0.2);			// TODO: mixin for prefix
+			box-shadow: 0 0 10px 0 rgba(18, 63, 79, 0.2);
+}
+
+// Links footer
+#region-links-footer {
+	padding: 0;
+	.menu li {
+		padding: 0;
+		margin: 2px 0;
+		font-size: 0.85em;
+		text-transform: uppercase;
+		&.first { margin-top: 0; }
+		&.last { margin-bottom: 0; }
+		//a:hover { text-decoration: underline; }
+	} 
+}
+
+// Social networks
+#region-social-networks {
+	float: right;
+	width: 30%;
+	padding: 0;
+	.block-title {
+		font-size: 0.8em;
+		text-transform: uppercase;
+		margin: 3px 0;
+	}
+	.widgets-element {
+		margin: 6px 6px 0 0;
+		img { width: 25px; }
+	}
+}
+
+// Copyright
+#region-copyright {
+	width: 100%;
+	padding: 0;
+	margin-top: 10px;
+	//font-size: 0.95em;
+
+	p {
+		margin-bottom: 0;
+	}
+}

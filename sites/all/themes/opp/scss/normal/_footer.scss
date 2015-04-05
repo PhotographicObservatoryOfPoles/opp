@@ -1,0 +1,23 @@
+// All styles for footer pages (normal)
+
+// For normal screens devices : i.e. tablets (portrait and landscape) and desktop -> iPad landscape
+// 1024px <= screen width < 1220px
+// Grid (content width = 960px)
+
+// Links footer
+#region-links-footer {
+	width: 580px;
+	padding: 0;
+	.menu li {
+		display: inline;
+		&:before { content: " | "; }
+		&:first-child:before { content: none; }
+		&.first { margin-left: 0; }
+		&.last { margin-right: 0; }
+	}
+}
+
+// Copyright
+#region-copyright {
+	width: 460px;
+}

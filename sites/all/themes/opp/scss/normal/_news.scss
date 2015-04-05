@@ -1,0 +1,15 @@
+// All styles for news pages (normal)
+
+// For normal screens devices : i.e. tablets (portrait and landscape) and desktop -> iPad landscape
+// 1024px <= screen width < 1220px
+// Grid (content width = 960px)
+
+/* All news page */
+
+/* One new page */
+.node-news {
+	.field-type-image {
+		float: left;
+		margin-right: 20px;
+	}
+}

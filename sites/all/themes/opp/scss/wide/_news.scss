@@ -1,0 +1,15 @@
+// All styles for news pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* All news page */
+
+/* One new page */
+.node-news {
+	.field-type-image {
+		float: left;
+		margin-right: 20px;
+	}
+}

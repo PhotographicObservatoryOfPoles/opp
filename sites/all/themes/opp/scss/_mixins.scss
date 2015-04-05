@@ -1,0 +1,125 @@
+/* This file will contains all the mixins */
+
+// Usage : @include transition($property, $duration, $function);
+// $property = propriété sur laquelle est appliquée la transition (background, width, etc.)
+// $duration = durée de la transition
+// $function = type d'animation/transition (ease, ease-in, etc.) (param facultatif)
+// Retourne la transition
+@mixin transition($property, $duration, $function: ease) {
+	-webkit-transition: $property $duration $function;
+	   -moz-transition: $property $duration $function;
+	    -ms-transition: $property $duration $function;
+	     -o-transition: $property $duration $function;
+	        transition: $property $duration $function;
+}
+
+// Usage : @include transform($args);
+// $args = translate(...), rotate(...), etc. ou autres arguments
+// $suffix = -origin (param facultatif)
+// Retourne la transformation
+@mixin transform($args, $suffix: '') {
+	-webkit-transform#{$suffix}: $args;
+	   -moz-transform#{$suffix}: $args;
+	    -ms-transform#{$suffix}: $args;
+	     -o-transform#{$suffix}: $args;
+	        transform#{$suffix}: $args;
+}
+
+// Usage : @include box-shadow($args);
+// $args = décalage horizontal vers la droite  décalage vertical vers le bas  force du dégradé  couleur
+// Retourne l'ombre
+@mixin box-shadow($args) {
+	-webkit-box-shadow: $args;
+	   -moz-box-shadow: $args;
+	   	-ms-box-shadow: $args;
+	     -o-box-shadow: $args;
+	        box-shadow: $args;
+}
+
+// Usage : @include border-radius($radius);
+// $radius = rayon d'arrondi des bords
+// Retourne l'ombre
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+			border-radius: $radius;
+}
+
+// Usage : @include down-arrow($color);
+// $color = couleur de la flèche
+// Retourne un flèche vers le bas
+@mixin down-arrow($color) {
+	content: "";
+	position: absolute;
+	top: 22px;
+	right: -15px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 4px 0 4px;
+	border-color: $color transparent transparent transparent;
+}
+
+// Usage : @include up-arrow($color);
+// $color = couleur de la flèche
+// Retourne un flèche vers le haut
+@mixin up-arrow($color) {
+	content: "";
+	position: absolute;
+	top: 22px;
+	right: -15px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 4px 6px 4px;
+	border-color: transparent transparent $color transparent;
+}
+
+
+
+
+// MAP : tag color & link color
+
+// Usage : @include dot-color();
+@mixin dot-color(){
+	$dot-colors: (
+			(tag_1  $tag_1-color)
+			(tag_2 $tag_2-color)
+			(tag_3  $tag_3-color)
+	        (tag_4 $tag_4-color)
+	        (tag_5  $tag_5-color)
+	        (tag_6  $tag_6-color)
+	        (tag_7  $tag_7-color)
+	        (tag_  $tag_default-color)
+	    ) !default;
+
+	@each $dot-color in $dot-colors {
+            $id:  nth($dot-color, 1);
+            $color: nth($dot-color, 2);
+
+        &.#{$id}{
+        	fill : $color;
+        }
+    }
+}
+
+// Usage : @include link-color();
+@mixin link-color(){
+	$link-colors: (
+			(tag-1  $tag_1-color)
+			(tag-2 $tag_2-color)
+			(tag-3  $tag_3-color)
+	        (tag-4 $tag_4-color)
+	        (tag-5  $tag_5-color)
+	        (tag-6  $tag_6-color)
+	        (tag-7  $tag_7-color)
+	    ) !default;
+
+	@each $link-color in $link-colors {
+            $id:  nth($link-color, 1);
+            $color: nth($link-color, 2);
+
+        &.#{$id}{
+        	color : $color;
+        }
+    }
+}

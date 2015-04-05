@@ -1,0 +1,38 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+
+// For normal screens devices : i.e. tablets (portrait and landscape) and desktop -> iPad landscape
+// 1024px <= screen width < 1220px
+// Grid (content width = 960px)
+
+/* Basis */
+@import "base";
+
+/* Common styles */
+// Header
+@import "normal/header";
+// Footer
+@import "normal/footer";
+// Commons
+@import "normal/commons";
+
+/* Specific styles */
+// Home
+@import "normal/homepage";
+// Observatoire
+@import "normal/observatoire";
+// Expeditions
+@import "normal/expeditions";
+// Galleries
+@import "normal/galleries";
+// Contributors
+@import "normal/contributors";
+// Maps
+@import "normal/maps";
+// Schools
+@import "normal/schools";
+// News
+@import "normal/news";
+// Taxonomy
+@import "normal/taxonomy";

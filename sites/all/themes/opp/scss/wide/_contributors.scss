@@ -1,0 +1,35 @@
+// All styles for contributors pages (wide)
+
+// For large screens devices : i.e. desktop
+// 1220px <= screen width
+// Grid (content width = 1200px)
+
+/* All contributors page */
+.region-main-content--contributors {
+	#views_slideshow_cycle_main_contr-supercontributors_slider {
+		.views-field-summary {
+			display: block;
+		}
+	}
+}
+
+/* One contributor page */
+.container-12 .region-main-content--contributor {
+	&.grid-8 {
+		width: 780px;
+	}
+}
+
+.container-12 .region-sidebar-right--contributor {
+	&.grid-4 {
+		float: right;
+  		display: inline;
+  		width: 380px;
+	}
+}
+
+.container-12 .region-postscript--contributor {
+	&.grid-8 {
+		width: 780px;
+	}
+}

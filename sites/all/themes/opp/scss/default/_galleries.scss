@@ -1,0 +1,278 @@
+// All styles for galleries pages (default)
+
+// For small screens devices : i.e. smartphones (landscape & portrait) -> iPhone
+// screen width < 768px
+// 100% fluid = no grid
+
+/* All galleries page */
+// Galleries
+.container-12 .region-main-content--galleries {
+	&.grid-9 {
+		width: 100%;
+		margin: auto;
+		display: block;
+		float: none;
+	}
+}
+
+.region-main-content--galleries {
+
+	.content {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.view-empty {
+		text-align: center;
+		margin: 10% 0;
+	}
+
+	.views-row {
+		max-width: 280px;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+		margin: 10px;
+	}
+
+	.figure-w-hover figcaption {
+		padding: 1em;
+
+		h2 {
+			font-size: 1.1em;
+		}
+
+		h3 {
+			font-size: 1em;
+			margin: 5px 0 20px 0;
+		}
+
+		p.tag {
+			font-size: 0.9em;
+		}
+
+		.link--view-more > a { 
+			font-size: 0.8em;
+		}
+	}
+}
+
+// Filters
+.region-sidebar-left--galleries {
+
+	&.grid-3 { display: none; }
+
+	margin-top: 10px;
+
+	.views-exposed-widget {
+		width: 100%;
+		padding: 0;
+		background: #F5F5F5;
+		margin-bottom: 20px;
+
+		+ .views-exposed-widget {
+			margin-bottom: 0;
+		}
+
+		&.views-submit-button {
+			position: absolute;
+			top: 1em;
+			left: 1em;
+			width: 15px;
+			height: 15px;
+			background: transparent;
+		}
+
+		.views-widget {
+			padding: 0 25px 15px 25px;
+		}
+
+		label {
+			text-align: center;
+			padding: 20px 0;
+		}
+
+		.form-item a {
+			display: block;
+			padding: 5px 0 5px 20px;
+			&:hover {
+				color: $link-color;
+				background: #E8E8E8;
+				border-bottom: 0;
+			}
+
+			&:active,
+			&:focus {
+				color: $link-color;
+				border-bottom: 0;
+			}
+
+			&.active {
+				font-weight: bold;
+				color: #123F4F;
+				background: #E8E8E8;
+			}
+		}
+
+		.form-item-region {
+			#edit-region-13,
+			#edit-region-14 {
+				background: rgba(232, 232, 232, 0.4);
+				margin-left: -5px;
+				border-bottom: 1px dashed silver;
+				border-top: 1px dashed silver;
+				> a {
+					color: $link-hover;
+					text-transform: uppercase;
+				}
+			}
+
+			.form-item {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+
+/* One gallery page */
+div.jb-navigation.jb-classifier-detail-area.jb-classifier-layer {
+	z-index: 0 !important;
+}
+
+
+.layout-wrapper--gallery {
+
+	.sidebar-left--gallery {
+		width: 25%;
+		height: 600px;
+		overflow-y: scroll;
+
+		padding: 30px 20px 10px 20px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+
+		.field-name-title {
+			h2 {
+				margin-bottom: 0;
+			}
+		}
+
+		.field-name-field-contributor {
+			margin-bottom: 5px;
+			a {
+				font-family: $title-font;
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			a:active,
+			a:focus,
+			a:hover {
+				border-bottom: 0;
+				//color: $base-color;
+			}
+		}
+
+		.field-name-field-tags,
+		.field-name-field-place {
+			display: inline-block;
+			background: $link-color;
+			padding: 0 5px;
+			margin-bottom: 10px;
+			margin-right: 3px;
+			color: white;
+
+			&:hover {
+				background: $link-hover;
+			}
+
+			a {
+				color: white;
+			}
+
+			a:active,
+			a:focus,
+			a:hover {
+				border-bottom: 0;
+			}
+		}
+
+		.field-name-field-coordinates {
+			display: inline-block;
+			margin: 10px 0;
+			background: #B2D0FE;
+
+			.geolocation-googlemaps-static {
+				border: 1px solid #60a6c2;
+			}
+		}
+		
+		.field-name-field-gallery-description {
+			margin: 20px 0;
+		}
+
+		.block-galeries-block-other-galleries {
+			h2.block-title {
+				font-size: 1em;
+				margin-bottom: 10px;
+			}
+
+			.content {
+				margin-left: -11px;
+				margin-right: -11px;
+				margin-top: -6px;
+			}
+
+			.views-row,
+			figure {
+				max-width: 145px;
+				overflow: hidden;
+				float: left;
+				margin: 3px;
+			}
+
+			.figure-w-hover figcaption {
+				padding: 0.6em;
+
+				h2 {
+					font-size: 0.9em;
+				}
+
+				h3 {
+					font-size: 0.8em;
+					margin: 5px 0;
+				}
+
+				.link--view-more > a { 
+					font-size: 0.75em;
+				}
+			}
+		}
+	}
+
+	.main-content--gallery {
+		width : 75%;
+		height : 600px;
+
+		.juicebox-container {
+			height : 600px !important;
+		}
+	}
+}
+
+/* Scroll bar */
+.sidebar-left--gallery::-webkit-scrollbar-track {
+	@include box-shadow(inset 0 0 6px rgba(0,0,0,0.3));
+	background-color: #F5F5F5;
+}
+
+.sidebar-left--gallery::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.sidebar-left--gallery::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.4);
+}
